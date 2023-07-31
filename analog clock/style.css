@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #eee;
+    gap: 2rem;
+}
+.title {
+    color: #212121;
+    margin-bottom: 40px;
+    font-family: Open Sans;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+    position: relative;
+}
+.title::after {
+position: absolute;
+content: "";
+width: 70%;
+background: #212121;
+height: 4px;
+left: 0;
+right: 0;
+bottom: -3px;
+margin: auto;
+border-radius: 50px;
+}
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 6px solid rgb(222, 245, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+    color: #212121;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+footer {
+    text-align: center;
+}
+footer span {
+    color: #212121;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    
+
+}
+footer .heart {
+    color: #d63c3c;
+    font-size: 2rem;
+}
